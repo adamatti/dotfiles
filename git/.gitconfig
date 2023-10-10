@@ -1,0 +1,9 @@
+[core]
+	excludesfile = ~/.gitignore
+[user]
+	name = Marcelo Adamatti
+	email = adamatti@gmail.com
+[push]
+	autoSetupRemote = true
+[init]
+	defaultBranch = main
