@@ -1,0 +1,2 @@
+export HOMEBREW_NO_ENV_HINTS="true"
+export NEXT_TELEMETRY_DISABLED="true"
