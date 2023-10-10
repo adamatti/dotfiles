@@ -1,5 +1,5 @@
 # ln -s $PWD/zsh/.zshrc ~/.zshrc
-DOTFILES_ROOT=~/workspace/github_ws/dotfiles
+export DOTFILES_ROOT=~/workspace/github_ws/dotfiles
 pkgs=("node" "terraform" "starship")
 source ${DOTFILES_ROOT}/zsh/main.zsh
 source ~/secret.zsh
@@ -32,5 +32,10 @@ if containsElement "p10k" "${pkgs[@]}"; then
 fi
 
 if containsElement "starship" "${pkgs[@]}"; then
+  if [[ $TERM_PROGRAM == "vscode" ]]; then
+    export STARSHIP_CONFIG=${DOTFILES_ROOT}/starship/starship-vscode.toml
+  else
+    export STARSHIP_CONFIG=${DOTFILES_ROOT}/starship/starship.toml
+  fi
   eval "$(starship init zsh)"
 fi

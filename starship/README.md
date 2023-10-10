@@ -1,0 +1,2 @@
+- Unable to make some conditions without the config, that is why a different vscode file
+- Toml don't support include, that is why it is duplicated
