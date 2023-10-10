@@ -11,7 +11,6 @@
 - shell:
     - git submodule sync --recursive
     - [git submodule update --init --recursive, Installing submodules]
-    - [./git/gitconfig.sh, Configuring git]
 
 - link:
     ~/.zshrc: zsh/.zshrc
