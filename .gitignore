@@ -1,0 +1,19 @@
+# ln -s $PWD/.gitignore ~/.gitignore
+# Folders
+tmp/
+node_modules/
+coverage/
+.task/
+.vscode/
+
+# Files
+.env
+Taskfile.yaml
+Taskfile*.yaml
+.DS_Store
+
+# Extensions
+*.not
+*.adamatti
+adamatti.*
+*.log
