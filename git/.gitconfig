@@ -1,5 +1,6 @@
 [core]
 	excludesfile = ~/.gitignore
+	editor = nano
 [user]
 	name = Marcelo Adamatti
 	email = adamatti@gmail.com
