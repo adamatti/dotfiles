@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
+---
+version: "3"
+
+includes:
+  docker:
+    aliases: [d]
+    taskfile: ./Taskfile-docker.yaml
+
+tasks:
+  default:
+    desc: Show help
+    aliases: [h]
+    silent: true
+    cmds:
+      - task -l
+
+  update:
+    desc: Update libs and tools
+    aliases: [u]
+    run: once
+    interactive: true
+    cmds:
+      - brew update
+      - cmd: arch -arm64 brew upgrade --greedy
+        ignore_error: true
+      - brew cleanup
+      - cmd: echo "To Update Oh-My-ZSH, pls run 'omz update'"
+        silent: true

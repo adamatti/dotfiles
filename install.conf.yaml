@@ -12,3 +12,7 @@
 - link:
     ~/.zshrc: zsh/.zshrc
     ~/.gitignore: git/.gitignore
+    ~/Taskfile-docker-compose.yaml: taskfile/Taskfile-docker-compose.yaml
+    ~/Taskfile-docker.yaml: taskfile/Taskfile-docker.yaml
+    ~/Taskfile-git.yaml: taskfile/Taskfile-git.yaml
+    ~/Taskfile.yaml: taskfile/Taskfile.yaml

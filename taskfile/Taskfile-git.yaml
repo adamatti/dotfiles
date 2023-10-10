@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
+---
+version: "3"
+
+tasks:
+  pull:
+    desc: Pull with rebase and auto stash
+    aliases: [p]
+    run: once
+    cmds:
+      - git pull --rebase --autostash
+
+  fetch-all:
+    desc: Fetch all
+    aliases: [f]
+    run: once
+    cmds:
+      - git fetch --all --prune --jobs=10
+
+  update:
+    desc: Pull + Fetch All
+    aliases: [u]
+    cmds:
+      - task: pull
+      - task: fetch-all
+
+  main:
+    desc: Switch to main branch
+    aliases: [m]
+    cmds:
+      - git checkout main
+      - task: update
+
+  pull-requests:
+    desc: Show open PRs (not draft)
+    run: once
+    aliases: [pr]
+    interactive: true
+    cmds:
+      - gh pr list --search "draft:false -author:app/dependabot"

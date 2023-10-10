@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
+---
+version: "3"
+
+tasks:
+  stop:
+    desc: Stop all docker containers
+    aliases: [s]
+    run: once
+    cmds:
+      - docker ps -aq | xargs docker stop
+
+  stop-and-remove:
+    desc: stop and remove all containers
+    aliases: [rm]
+    run: once
+    cmds:
+      - docker ps -aq | xargs docker stop | xargs docker rm
+      - docker volume prune -f      
+
+  prune:
+    desc: Delete old resources
+    aliases: [p]
+    interactive: true
+    run: once
+    cmds:
+      - task: stop-and-remove
+      - docker image prune -a -f
+      - docker network prune -f

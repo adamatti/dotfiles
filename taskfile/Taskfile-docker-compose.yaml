@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
+---
+version: "3"
+
+preconditions:
+  <<: &precondition
+    sh: test -f docker-compose.yaml -o -f docker-compose.yml
+
+tasks:
+  up:
+    desc: Start docker compose
+    aliases: [up]
+    run: once
+    preconditions:
+      - *precondition
+    cmds:
+      - docker-compose up -d
+
+  stop:
+    desc: Stop
+    aliases: [s]
+    run: once
+    preconditions:
+      - *precondition
+    cmds:
+      - docker-compose stop -t 0
+
+  rm:
+    desc: Removes
+    deps: [stop]
+    aliases: [rm]
+    run: once
+    preconditions:
+      - *precondition
+    cmds:
+      - docker-compose rm -fv
+
+  restart:
+    desc: Restart containers
+    aliases: [r]
+    run: once
+    preconditions:
+      - *precondition
+    cmds:
+      - task: stop
+      - task: up
