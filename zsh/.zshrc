@@ -1,4 +1,5 @@
 # ln -s $PWD/zsh/.zshrc ~/.zshrc
+# Full sample: https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template
 export DOTFILES_ROOT=~/workspace/github_ws/dotfiles
 pkgs=("node" "terraform" "starship")
 source ${DOTFILES_ROOT}/zsh/main.zsh
