@@ -4,13 +4,6 @@ pkgs=("node" "terraform" "starship")
 source ${DOTFILES_ROOT}/zsh/main.zsh
 source ~/secret.zsh
 
-containsElement() {
-  local e match="$1"
-  shift
-  for e; do [[ "$e" == "$match" ]] && return 0; done
-  return 1
-}
-
 if containsElement "p10k" "${pkgs[@]}"; then 
   if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
