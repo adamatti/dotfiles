@@ -17,6 +17,7 @@ lazygit
 oci-cli
 plantuml
 powerlevel10k
+rclone
 starship
 terraform
 tflint
