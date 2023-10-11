@@ -6,7 +6,8 @@
 
 - create:
     - ~/.config
-    - ~/workspace
+    - ~/workspace/3rd
+    - ~/workspace/github_ws
 
 - shell:
     - git submodule sync --recursive
