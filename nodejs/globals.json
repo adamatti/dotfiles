@@ -1,0 +1,25 @@
+{
+  "name": "lib",
+  "dependencies": {
+    "@antfu/ni": {
+      "version": "0.21.8",
+      "overridden": false
+    },
+    "aws-sso-creds-helper": {
+      "version": "1.10.11",
+      "overridden": false
+    },
+    "npm": {
+      "version": "9.6.7",
+      "overridden": false
+    },
+    "ts-node": {
+      "version": "10.9.1",
+      "overridden": false
+    },
+    "yarn": {
+      "version": "1.22.19",
+      "overridden": false
+    }
+  }
+}

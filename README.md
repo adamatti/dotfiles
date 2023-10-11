@@ -2,12 +2,9 @@ Repo to expose dotfiles.
 
 # How to install
 
-Just run `./install`. It does use [dotbot](https://github.com/anishathalye/dotbot)
+Just run `./install`. It does use [dotbot](https://github.com/anishathalye/dotbot).
 
-# Useful commands
-
-- `brew leaves` - all top-level brew installs
-- `npm list -g --depth=0`
+Or can use `task install` / `task install:all` (requires [Taskfile](https://taskfile.dev/))
 
 # References
 
