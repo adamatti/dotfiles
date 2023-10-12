@@ -3,7 +3,15 @@
 export DOTFILES_ROOT=~/workspace/github_ws/dotfiles
 pkgs=("node" "terraform" "starship")
 source ${DOTFILES_ROOT}/zsh/main.zsh
-source ~/secret.zsh
+
+if test -f "~/secret.zsh"; then
+  source ~/secret.zsh
+fi
+
+if [[ $(uname -m) == 'arm64' ]]; then
+  # apple m1
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 if containsElement "p10k" "${pkgs[@]}"; then 
   if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
