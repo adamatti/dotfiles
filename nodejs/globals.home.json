@@ -1,0 +1,21 @@
+{
+  "name": "lib",
+  "dependencies": {
+    "@antfu/ni": {
+      "version": "0.21.8",
+      "overridden": false
+    },
+    "corepack": {
+      "version": "0.19.0",
+      "overridden": false
+    },
+    "npm": {
+      "version": "9.8.1",
+      "overridden": false
+    },
+    "yarn": {
+      "version": "1.22.19",
+      "overridden": false
+    }
+  }
+}

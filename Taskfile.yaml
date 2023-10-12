@@ -2,6 +2,9 @@
 ---
 version: "3"
 
+env:
+  PROFILE: home
+
 tasks:
   default:
     desc: Show help
@@ -20,7 +23,7 @@ tasks:
     desc: Save installed brews
     aliases: [bs]
     cmds:
-      - brew leaves > brew/Brewfile
+      - brew leaves > brew/Brewfile.${PROFILE}
 
   brew:install:
     desc: Install brew apps
@@ -32,8 +35,8 @@ tasks:
     desc: Save vscode extensions to save on another pc
     aliases: [ves]
     cmds:
-      - code --list-extensions > vscode/extensions.txt
-  
+      - code --list-extensions > vscode/extensions.${PROFILE}.txt
+
   vscode:extensions:install:
     desc: Install vscode extensions
     aliases: [vei]
@@ -44,7 +47,7 @@ tasks:
     desc: Save global installs
     aliases: [ns]
     cmds:
-      - npm list -g --depth=0 -json > nodejs/globals.json
+      - npm list -g --depth=0 -json > nodejs/globals.${PROFILE}.json
 
   install:all:
     desc: Install all (synlinks, brew, vscode extensions)
@@ -63,4 +66,3 @@ tasks:
       - brew:save
       - vscode:extensions:save
       - nodejs:save
-      
