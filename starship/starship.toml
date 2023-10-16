@@ -70,7 +70,8 @@ $battery\
 $status\
 $os\
 $container\
-$shell"""
+$shell\
+$time"""
 
 format = """
 $username\
@@ -88,7 +89,6 @@ $git_state\
 $git_metrics\
 $git_status\
 $hg_branch\
-$time\
 $character"""
 
 [character]
@@ -179,6 +179,7 @@ symbol = " "
 
 [git_branch]
 symbol = " "
+style = "black"
 
 [golang]
 symbol = " "
