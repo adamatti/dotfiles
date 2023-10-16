@@ -1,7 +1,7 @@
 # ln -s $PWD/zsh/.zshrc ~/.zshrc
 # Full sample: https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template
 export DOTFILES_ROOT=~/workspace/github_ws/dotfiles
-pkgs=("node" "terraform" "starship")
+pkgs=("node" "terraform" "starship" "java")
 source ${DOTFILES_ROOT}/zsh/main.zsh
 
 if test -f "~/secret.zsh"; then
@@ -47,4 +47,9 @@ if containsElement "starship" "${pkgs[@]}"; then
     export STARSHIP_CONFIG=${DOTFILES_ROOT}/starship/starship.toml
   fi
   eval "$(starship init zsh)"
+fi
+
+if containsElement "java" "${pkgs[@]}"; then
+  export SDKMAN_DIR="$HOME/.sdkman"
+  [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
