@@ -15,9 +15,17 @@ tasks:
     cmds:
       - task -l
 
-  update:
-    desc: Update libs and tools
-    aliases: [u]
+  update-dotfiles:
+    desc: Update dot files
+    aliases: [ud]
+    run: once
+    interactive: true
+    cmds:
+      - cd ${DOTFILES_ROOT};git pull --rebase --autostash
+
+  update-brew:
+    desc: Update brew apps
+    aliases: [ub]
     run: once
     interactive: true
     cmds:
@@ -25,5 +33,14 @@ tasks:
       - cmd: arch -arm64 brew upgrade --greedy
         ignore_error: true
       - brew cleanup
+
+  update:
+    desc: Update libs and tools
+    aliases: [u]
+    run: once
+    interactive: true
+    cmds:
+      - task: update-dotfiles
+      - task: update-brew
       - cmd: echo "To Update Oh-My-ZSH, pls run 'omz update'"
         silent: true
