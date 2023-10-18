@@ -44,3 +44,10 @@ tasks:
       - task: update-brew
       - cmd: echo "To Update Oh-My-ZSH, pls run 'omz update'"
         silent: true
+  
+  weather:
+    desc: Show weather for canoas
+    aliases: [w]
+    silent: true
+    cmds:
+      - curl wttr.in/canoas
