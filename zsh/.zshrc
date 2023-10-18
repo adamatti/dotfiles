@@ -4,7 +4,7 @@ export DOTFILES_ROOT=~/workspace/github_ws/dotfiles
 pkgs=("node" "terraform" "starship" "java")
 source ${DOTFILES_ROOT}/zsh/main.zsh
 
-if test -f "~/secret.zsh"; then
+if test -f ~/secret.zsh; then
   source ~/secret.zsh
 fi
 
