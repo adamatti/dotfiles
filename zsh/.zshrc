@@ -1,8 +1,8 @@
 # ln -s $PWD/zsh/.zshrc ~/.zshrc
 # Full sample: https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template
+pkgs=("node" "terraform" "starship" "java" "ruby")
 export DOTFILES_ROOT=~/workspace/github_ws/dotfiles
-pkgs=("node" "terraform" "starship" "java")
-source ${DOTFILES_ROOT}/zsh/main.zsh
+source ${DOTFILES_ROOT}/zsh/before.zsh
 
 if test -f ~/secret.zsh; then
   source ~/secret.zsh
@@ -53,3 +53,12 @@ if containsElement "java" "${pkgs[@]}"; then
   export SDKMAN_DIR="$HOME/.sdkman"
   [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
+
+if containsElement "ruby" "${pkgs[@]}"; then
+  if [[ -r "$HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh" ]]; then
+    source "$HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh"
+    source "$HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh"
+  fi
+fi
+
+source ${DOTFILES_ROOT}/zsh/after.zsh
