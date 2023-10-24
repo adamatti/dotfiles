@@ -23,25 +23,14 @@ tasks:
     desc: Save installed brews
     aliases: [bs]
     cmds:
-      - brew leaves > brew/Brewfile.${PROFILE}
+      - rm -f brew/Brewfile.${PROFILE}
+      - brew bundle dump --file=brew/Brewfile.${PROFILE}
 
   brew:install:
     desc: Install brew apps
     aliases: [bi]
     cmds:
-      - brew install $(cat brew/Brewfile)
-
-  vscode:extensions:save:
-    desc: Save vscode extensions to save on another pc
-    aliases: [ves]
-    cmds:
-      - code --list-extensions > vscode/extensions.${PROFILE}.txt
-
-  vscode:extensions:install:
-    desc: Install vscode extensions
-    aliases: [vei]
-    cmds:
-      - awk '{ printf "code --install-extension %s\n", $1 }' "vscode/extensions.txt" | bash
+      - brew bundle install --file=brew/Brewfile.${PROFILE}
 
   nodejs:save:
     desc: Save global installs
@@ -50,13 +39,12 @@ tasks:
       - npm list -g --depth=0 -json > nodejs/globals.${PROFILE}.json
 
   install:all:
-    desc: Install all (synlinks, brew, vscode extensions)
+    desc: Install all (synlinks, brew)
     aliases: [ia]
     cmds:
       # run sequencialy
       - task: install
       - task: brew:install
-      - task: vscode:extensions:install
 
   save:all:
     desc: Save current config
@@ -64,5 +52,4 @@ tasks:
     deps:
       # run in parallel
       - brew:save
-      - vscode:extensions:save
       - nodejs:save
