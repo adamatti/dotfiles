@@ -2,15 +2,16 @@
 # Full sample: https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template
 pkgs=("node" "terraform" "starship" "java" "ruby")
 export DOTFILES_ROOT=~/workspace/github_ws/dotfiles
-source ${DOTFILES_ROOT}/zsh/before.zsh
-
-if test -f ~/secret.zsh; then
-  source ~/secret.zsh
-fi
 
 if [[ $(uname -m) == 'arm64' ]]; then
   # apple m1
   eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+source ${DOTFILES_ROOT}/zsh/before.zsh
+
+if test -f ~/secret.zsh; then
+  source ~/secret.zsh
 fi
 
 if containsElement "p10k" "${pkgs[@]}"; then 
