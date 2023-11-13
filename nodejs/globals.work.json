@@ -5,8 +5,20 @@
       "version": "0.21.8",
       "overridden": false
     },
+    "@stoplight/spectral-cli": {
+      "version": "6.11.0",
+      "overridden": false
+    },
+    "@usebruno/cli": {
+      "version": "0.14.0",
+      "overridden": false
+    },
     "aws-sso-creds-helper": {
       "version": "1.10.11",
+      "overridden": false
+    },
+    "hostile": {
+      "version": "1.3.3",
       "overridden": false
     },
     "npm": {
