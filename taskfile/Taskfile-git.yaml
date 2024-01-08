@@ -8,7 +8,7 @@ tasks:
     aliases: [p]
     run: once
     cmds:
-      - git pull --rebase --autostash
+      - git pull --autostash
 
   fetch-all:
     desc: Fetch all
