@@ -1,5 +1,6 @@
 ---
 title: Personal
+sequence: parallel
 ---
 
 Todoist
@@ -7,8 +8,12 @@ Joplin
 Beeper
 Spark
 YT Music
+
+# Ignore close
 %Warp
 %Brave Browser
+
+# Imports
 <shared.snippet#Background
 
 (show dock)

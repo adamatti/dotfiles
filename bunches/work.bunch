@@ -1,16 +1,24 @@
 ---
 title: Work
+sequence: parallel
 ---
 
 Slack
 Microsoft Outlook
-Microsoft Teams
+
+# Ignore close
 %Warp
 %Brave Browser
-Bruno
-DbGate
-zoom.us
+
+# Delay start
+Bruno ~5
+DbGate ~5
+
+# Imports
 <shared.snippet#Background
+
+# Microsoft Teams
+# zoom.us
 # Brave Browser[Profile 1]:https://www.google.com
 
 (show dock)
