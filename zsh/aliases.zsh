@@ -11,3 +11,10 @@ alias tfl="tflint --disable-rule=terraform_unused_declarations --disable-rule=te
 
 # oh-my-zsh / git plugin deprecated
 alias gupa="git pull --autostash"
+
+# Pet
+alias pes="pet search --color"
+alias pex="pet exec --color"
+alias pec="pet search --color | pbcopy"
+alias pen="pet new -t"
+alias pel="pet list"
