@@ -26,7 +26,7 @@ ZSH_THEME="af-magic"
 
 zstyle ':omz:update' mode auto  # update automatically without asking
 
-plugins=(git z dotenv)
+plugins=(git z)
 
 source $ZSH/oh-my-zsh.sh
 
