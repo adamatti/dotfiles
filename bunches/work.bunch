@@ -11,8 +11,15 @@ Microsoft Outlook
 %Brave Browser
 
 # Delay start
-Bruno ~5
-DbGate ~5
+# Bruno ~5
+# DbGate ~5
+
+# Close when Bunch closes
+!!!Bruno
+!!!DbGate
+!!!zoom.us
+!!!Microsoft Teams classic
+!!!Authy
 
 # Imports
 <shared.snippet#Background

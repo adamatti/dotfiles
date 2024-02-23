@@ -13,6 +13,9 @@ YT Music
 %Warp
 %Brave Browser
 
+# Close when Bunch closes
+!!!Preview
+
 # Imports
 <shared.snippet#Background
 
