@@ -8,3 +8,13 @@
 	autoSetupRemote = true
 [init]
 	defaultBranch = main
+[pull]
+	rebase = false
+	ff = only
+[rerere]
+	enabled = true
+[maintenance]
+	auto = false
+	strategy = incremental
+[fetch]
+	writeCommitGraph = true
