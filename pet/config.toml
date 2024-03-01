@@ -1,0 +1,7 @@
+[General]
+  snippetfile = "/Users/adamatti/.config/pet/snippet.toml"
+  editor = "code"
+  column = 40
+  selectcmd = "fzf --ansi"
+  backend = "gist"
+  sortby  = "description"

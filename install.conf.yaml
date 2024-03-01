@@ -22,3 +22,4 @@
     ~/Taskfile-git.yaml: taskfile/Taskfile-git.yaml
     ~/Taskfile.yaml: taskfile/Taskfile.yaml
     ~/Documents/Bunches: bunches
+    ~/.config/pet: pet

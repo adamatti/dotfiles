@@ -1,0 +1,47 @@
+[[snippets]]
+  description = "Git: undo latest commit"
+  command = "git reset --soft HEAD~"
+  tag = ["git"]
+  output = ""
+
+[[snippets]]
+  description = "Git: fetch all and prune"
+  command = "git fetch --all --prune --jobs=10"
+  tag = ["git"]
+  output = ""
+
+[[snippets]]
+  description = "Git: empty commit to trigger build"
+  command = "git commit --allow-empty -m \"chore: trigger build\""
+  tag = ["git"]
+  output = ""
+
+[[snippets]]
+  description = "Git: The old Gupa"
+  command = "git pull --rebase --autostash"
+  tag = ["git"]
+  output = ""
+
+[[snippets]]
+  description = "Docker: stop and remove all containers"
+  command = "task -g docker:stop-and-remove"
+  tag = ["docker"]
+  output = ""
+
+[[snippets]]
+  description = "Docker: stop all containers"
+  command = "docker ps -aq | xargs docker stop"
+  tag = ["docker"]
+  output = ""
+
+[[snippets]]
+  description = "DNS: refresh DNS"
+  command = "sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+  tag = ["infra", "dns"]
+  output = ""
+
+[[snippets]]
+  description = "Docker: full prune"
+  command = "docker system prune"
+  tag = ["docker"]
+  output = ""
