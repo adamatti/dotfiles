@@ -26,9 +26,12 @@ ZSH_THEME="af-magic"
 
 zstyle ':omz:update' mode auto  # update automatically without asking
 
-plugins=(git z)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+
+# z / autojump alternative
+eval "$(zoxide init zsh)"
 
 if containsElement "node" "${pkgs[@]}"; then 
   alias nvm="fnm"
@@ -63,3 +66,5 @@ if containsElement "ruby" "${pkgs[@]}"; then
 fi
 
 source ${DOTFILES_ROOT}/zsh/after.zsh
+
+ulimit -n 10240
