@@ -35,13 +35,25 @@
   output = ""
 
 [[snippets]]
+  description = "Docker: remove all images"
+  command = "docker image ls -q | xargs -I {} docker image rm -f {}"
+  tag = ["docker"]
+  output = ""
+
+[[snippets]]
+  description = "Docker: full prune"
+  command = "docker system prune"
+  tag = ["docker"]
+  output = ""
+
+[[snippets]]
   description = "DNS: refresh DNS"
   command = "sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
   tag = ["infra", "dns"]
   output = ""
 
 [[snippets]]
-  description = "Docker: full prune"
-  command = "docker system prune"
+  description = "Docker: image prune"
+  command = "docker image prune --all --force"
   tag = ["docker"]
   output = ""
