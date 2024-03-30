@@ -30,8 +30,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# z / autojump alternative
-eval "$(zoxide init zsh)"
+if which zoxide &> /dev/null; then
+  # z / autojump alternative
+  eval "$(zoxide init zsh)"
+fi
 
 if containsElement "node" "${pkgs[@]}"; then 
   alias nvm="fnm"
