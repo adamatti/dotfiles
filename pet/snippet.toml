@@ -41,6 +41,12 @@
   output = ""
 
 [[snippets]]
+  description = "Docker: image prune"
+  command = "docker image prune --all --force"
+  tag = ["docker"]
+  output = ""
+
+[[snippets]]
   description = "Docker: full prune"
   command = "docker system prune"
   tag = ["docker"]
@@ -53,7 +59,19 @@
   output = ""
 
 [[snippets]]
-  description = "Docker: image prune"
-  command = "docker image prune --all --force"
-  tag = ["docker"]
+  description = "Brew: list pinned items"
+  command = "brew list --pinned"
+  tag = ["brew"]
+  output = ""
+
+[[snippets]]
+  description = "Brew: list casks"
+  command = "brew cu"
+  tag = ["brew"]
+  output = ""
+
+[[snippets]]
+  description = "Cron: logs"
+  command = "grep -i cron /var/log/system.log"
+  tag = ["cron"]
   output = ""
