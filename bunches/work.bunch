@@ -4,7 +4,6 @@ sequence: parallel
 ---
 
 Slack
-Microsoft Outlook
 
 # Ignore close
 %Warp
@@ -19,6 +18,7 @@ Microsoft Outlook
 !!!DbGate
 !!!zoom.us
 !!!Microsoft Teams classic
+!!!Microsoft Outlook
 !!!Authy
 !!!DBeaver
 
