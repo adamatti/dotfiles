@@ -1,7 +1,6 @@
 # ln -s $PWD/.gitignore ~/.gitignore
 # Folders
 tmp/
-node_modules/
 coverage/
 .task/
 .vscode/
@@ -17,3 +16,8 @@ Taskfile*.yaml
 *.adamatti
 adamatti.*
 *.log
+
+# Nodejs
+.clinic/
+node_modules/
+*.cpuprofile
