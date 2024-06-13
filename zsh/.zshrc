@@ -67,13 +67,6 @@ if containsElement "ruby" "${pkgs[@]}"; then
   fi
 fi
 
-# https://martinheinz.dev/blog/110
-export HISTSIZE=10000000
-export SAVEHIST=10000000
-export HISTORY_IGNORE="(ls|pwd|exit)*"
-
-export VISUAL="nano"
-
 source ${DOTFILES_ROOT}/zsh/after.zsh
 
 ulimit -n 10240
