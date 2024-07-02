@@ -35,9 +35,15 @@ if which zoxide &> /dev/null; then
   eval "$(zoxide init zsh)"
 fi
 
-if containsElement "node" "${pkgs[@]}"; then 
-  alias nvm="fnm"
-  eval "$(fnm env --use-on-cd)"
+# asdf / nvm / fnm / sdkman / chruby / rbenv / pyenv / rustup / volta / etc
+if which mise &> /dev/null; then
+  eval "$(mise activate zsh)"
+fi
+
+if which walk &> /dev/null; then
+  function lk {
+    cd "$(walk --icons --preview "$@")"
+  }
 fi
 
 if containsElement "p10k" "${pkgs[@]}"; then 
@@ -53,18 +59,6 @@ if containsElement "starship" "${pkgs[@]}"; then
     export STARSHIP_CONFIG=${DOTFILES_ROOT}/starship/starship.toml
   fi
   eval "$(starship init zsh)"
-fi
-
-if containsElement "java" "${pkgs[@]}"; then
-  export SDKMAN_DIR="$HOME/.sdkman"
-  [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-fi
-
-if containsElement "ruby" "${pkgs[@]}"; then
-  if [[ -r "$HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh" ]]; then
-    source "$HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh"
-    source "$HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh"
-  fi
 fi
 
 source ${DOTFILES_ROOT}/zsh/after.zsh
