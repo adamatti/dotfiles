@@ -34,6 +34,14 @@ tasks:
         ignore_error: true
       - brew cleanup
 
+  update-mise:
+    desc: Update mise
+    aliases: [um]
+    run: once
+    interactive: true
+    cmds:
+      - mise upgrade
+
   update:
     desc: Update libs and tools
     aliases: [u]
@@ -42,6 +50,7 @@ tasks:
     cmds:
       - task: update-dotfiles
       - task: update-brew
+      - task: update-mise
       - cmd: echo "To Update Oh-My-ZSH, pls run 'omz update'"
         silent: true
   
