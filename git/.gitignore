@@ -10,6 +10,7 @@ coverage/
 Taskfile.yaml
 Taskfile*.yaml
 .DS_Store
+.mise.toml
 
 # Extensions
 *.not
