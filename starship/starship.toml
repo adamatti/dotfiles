@@ -155,7 +155,8 @@ utc_time_offset = 'local'
 # time_range = '10:00:00-14:00:00'
 
 [terraform]
-format = '[$version$workspace]($style) '
+symbol = ""
+format = '$symbol[tf $version $workspace]($style) '
 
 [buf]
 symbol = " "
