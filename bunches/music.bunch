@@ -1,0 +1,19 @@
+---
+title: Music
+---
+
+x-bunch://close/meeting
+x-bunch://close/presenter
+(audio output Macbook Pro)
+(audio output volume 40)
+(dnd off)
+YT Music
+
+# Close zoom
+!zoom.us
+
+# Focus on music
+@YT Music
+
+# Close when Bunch closes
+!!!YT Music

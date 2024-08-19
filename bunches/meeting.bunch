@@ -1,0 +1,13 @@
+---
+title: Entering a meeting
+---
+
+x-bunch://close/music
+(audio output Fifine)
+(audio output volume 40)
+
+# Open zoom, ignore close
+%zoom.us
+
+# Focus on zoom
+# @zoom.us
