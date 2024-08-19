@@ -1,5 +1,8 @@
 # ln -s $PWD/zsh/.zshrc ~/.zshrc
 # Full sample: https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template
+
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 pkgs=("node" "terraform" "starship" "java" "ruby")
 export DOTFILES_ROOT=~/workspace/github_ws/dotfiles
 
@@ -64,3 +67,6 @@ fi
 source ${DOTFILES_ROOT}/zsh/after.zsh
 
 ulimit -n 10240
+
+# For Warp (terminal), new line
+PROMPT="${PROMPT}"$'\n'
