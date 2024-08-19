@@ -3,7 +3,7 @@
 
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
-pkgs=("node" "terraform" "starship" "java" "ruby")
+pkgs=("starship")
 export DOTFILES_ROOT=~/workspace/github_ws/dotfiles
 
 if [[ $(uname -m) == 'arm64' ]]; then
@@ -15,12 +15,6 @@ source ${DOTFILES_ROOT}/zsh/before.zsh
 
 if test -f ~/secret.zsh; then
   source ~/secret.zsh
-fi
-
-if containsElement "p10k" "${pkgs[@]}"; then 
-  if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-  fi
 fi
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -47,12 +41,6 @@ if which walk &> /dev/null; then
   function lk {
     cd "$(walk --icons --preview "$@")"
   }
-fi
-
-if containsElement "p10k" "${pkgs[@]}"; then 
-  source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
-  # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
 
 if containsElement "starship" "${pkgs[@]}"; then
