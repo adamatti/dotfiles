@@ -141,6 +141,7 @@ symbol = "[](bold green) "
 format = '$symbol[$version](bold green) '
 
 [pulumi]
+disabled = true
 symbol = "🧊 "
 
 [docker_context]
