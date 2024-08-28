@@ -1,15 +1,15 @@
 # ln -s $PWD/zsh/.zshrc ~/.zshrc
 # Full sample: https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template
 
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-pkgs=("starship")
-export DOTFILES_ROOT=~/workspace/github_ws/dotfiles
-
 if [[ $(uname -m) == 'arm64' ]]; then
   # apple m1
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+pkgs=("starship")
+export DOTFILES_ROOT=~/workspace/github_ws/dotfiles
 
 source ${DOTFILES_ROOT}/zsh/before.zsh
 
@@ -21,23 +21,23 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="af-magic"
 
-zstyle ':omz:update' mode auto  # update automatically without asking
+zstyle ':omz:update' mode auto # update automatically without asking
 
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-if which zoxide &> /dev/null; then
+if which zoxide &>/dev/null; then
   # z / autojump alternative
   eval "$(zoxide init zsh)"
 fi
 
 # asdf / nvm / fnm / sdkman / chruby / rbenv / pyenv / rustup / volta / etc
-if which mise &> /dev/null; then
+if which mise &>/dev/null; then
   eval "$(mise activate zsh)"
 fi
 
-if which walk &> /dev/null; then
+if which walk &>/dev/null; then
   function lk {
     cd "$(walk --icons --preview "$@")"
   }
