@@ -23,14 +23,25 @@ tasks:
     desc: Save installed brews
     aliases: [bs]
     cmds:
-      - rm -f brew/Brewfile.${PROFILE}
+      - cmd: rm -f brew/Brewfile.${PROFILE}
+        silent: true
+      - cmd: rm -f brew/Brewfile.${PROFILE}.leaves.txt
+        silent: true
       - brew bundle dump --file=brew/Brewfile.${PROFILE}
+      - brew leaves > brew/Brewfile.${PROFILE}.leaves.txt
 
   brew:install:
     desc: Install brew apps
     aliases: [bi]
     cmds:
       - brew bundle install --file=brew/Brewfile.${PROFILE}
+
+  brew:deps-tree:
+    desc: Save brew dependency tree
+    aliases: [bt]
+    cmds:
+      - brew deps --tree --installed > brew-tree.txt
+      - code brew-tree.txt
 
   nodejs:save:
     desc: Save global installs
