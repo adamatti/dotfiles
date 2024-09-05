@@ -2,6 +2,7 @@ awscli
 bat
 coreutils
 curl
+d2
 fd
 gh
 git
@@ -15,7 +16,6 @@ lazydocker
 lazygit
 libpq
 mise
-node
 noti
 plantuml
 procs
