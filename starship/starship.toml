@@ -1,4 +1,4 @@
-add_newline = false
+add_newline = true
 command_timeout = 2000
 
 right_format = """
@@ -289,6 +289,10 @@ symbol = " "
 [container]
 format = '[$symbol \[$name\]]($style) '
 disabled = false
+
+[shell]
+disabled = false
+style = 'yellow bold'
 
 [custom.dotenv]
 description = 'It does contain a dotenv file'
