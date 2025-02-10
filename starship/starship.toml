@@ -1,4 +1,4 @@
-add_newline = true
+add_newline = false
 command_timeout = 2000
 
 right_format = """
@@ -72,6 +72,7 @@ $status\
 $os\
 $container\
 $shell\
+$kubernetes\
 $time"""
 
 format = """
@@ -80,7 +81,6 @@ $hostname\
 $localip\
 $shlvl\
 $singularity\
-$kubernetes\
 $directory\
 $vcsh\
 $fossil_branch\
@@ -118,7 +118,7 @@ truncation_symbol = '…/'
 "Pictures" = " "
 
 [fill]
-symbol =" "
+symbol = " "
 disabled = false
 
 [aws]
@@ -182,7 +182,7 @@ symbol = " "
 
 [git_branch]
 symbol = " "
-style = "black"
+style = "white"
 
 [golang]
 symbol = " "
@@ -292,7 +292,21 @@ disabled = false
 
 [shell]
 disabled = false
-style = 'yellow bold'
+style = 'purple bold'
+
+[kubernetes]
+format = '[$symbol$context/$namespace]($style) '
+disabled = false
+
+[[kubernetes.contexts]]
+context_pattern = 'arn.*:cluster/prod'
+context_alias = "prod"
+style = "red bold"
+
+[[kubernetes.contexts]]
+context_pattern = 'arn.*:cluster/nonprod'
+context_alias = "nonprod"
+style = "cyan bold"
 
 [custom.dotenv]
 description = 'It does contain a dotenv file'
