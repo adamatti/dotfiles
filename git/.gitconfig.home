@@ -1,0 +1,9 @@
+[user]
+name = Marcelo Adamatti
+email = adamatti@gmail.com
+
+[github]
+user = "adamatti"
+
+[core]
+sshCommand = "ssh -i ~/.ssh/id_ed25519"

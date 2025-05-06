@@ -11,6 +11,8 @@ Taskfile.yaml
 Taskfile*.yaml
 .DS_Store
 .mise.toml
+Makefile
+*.old
 
 # Extensions
 *.not

@@ -1,35 +1,66 @@
 [core]
-	excludesfile = ~/.gitignore
-	editor = nano
+excludesfile = ~/.gitignore
+editor = nano
+
 [user]
-	name = Marcelo Adamatti
-	email = adamatti@gmail.com
+name = Marcelo Adamatti
+email = adamatti@gmail.com
+
+[github]
+user = "adamatti"
+
+[includeIf "gitdir:~/workspace/upkeep_ws/"]
+path = ~/workspace/github_ws/dotfiles/git/.gitconfig.work
+
 [push]
-	autoSetupRemote = true
+autoSetupRemote = true
+
 [init]
-	defaultBranch = main
+defaultBranch = main
+
 [pull]
-	rebase = false
-	ff = only
+rebase = false
+ff = only
+
 [rerere]
-	enabled = true
+enabled = true
+
 [maintenance]
-	auto = false
-	strategy = incremental
+auto = false
+strategy = incremental
+
 [fetch]
-	writeCommitGraph = true
-	prune = true
+writeCommitGraph = true
+prune = true
+
 [diff]
-	tool = difftastic
+tool = difftastic
+
 [difftool]
-	prompt = false
+prompt = false
 [difftool "difftastic"]
-	cmd = difft "$LOCAL" "$REMOTE"
+cmd = difft "$LOCAL" "$REMOTE"
+
 [pager]
-	difftool = true
+difftool = true
+
 [alias]
-	# `git dft` is less to type than `git difftool`.
-    dft = difftool
-[alias]
-	# `git dlog` to show `git log -p` with difftastic.
-    dlog = "!f() { : git log ; GIT_EXTERNAL_DIFF=difft git log -p --ext-diff $@; }; f"
+# `git dft` is less to type than `git difftool`.
+dft = difftool
+# `git dlog` to show `git log -p` with difftastic.
+dlog = "!f() { : git log ; GIT_EXTERNAL_DIFF=difft git log -p --ext-diff $@; }; f"
+go = "!f() { \
+  echo '## Staging changes'; \
+  git add . ; \
+  echo '## Stashing'; \
+  git stash ; \
+  echo '## Changing branch to $1'; \
+  git checkout $1 ; \
+  echo '## git pull --rebase --autostash'; \
+  git pull --rebase --autostash ; \
+  echo '## stash pop'; \
+  git stash pop ; \
+}; f"
+
+# Notes:
+# In a Git alias, the ! at the beginning of the command allows you to run shell commands instead of just simple Git commands

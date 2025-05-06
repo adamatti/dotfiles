@@ -1,0 +1,9 @@
+[user]
+name = Marcelo Adamatti
+email = marcelo.adamatti@upkeep.com
+
+[github]
+user = "adamatti-upkeep"
+
+[core]
+sshCommand = "ssh -i ~/.ssh/upkeep/id_ed25519"
