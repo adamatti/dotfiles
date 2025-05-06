@@ -13,7 +13,7 @@ tasks:
     aliases: [h]
     silent: true
     cmds:
-      - task -l
+      - task -l --sort alphanumeric
 
   update-dotfiles:
     desc: Update dot files
@@ -28,11 +28,19 @@ tasks:
     aliases: [ub]
     run: once
     interactive: true
+    env:
+      # https://github.com/Homebrew/brew/issues/14516#issuecomment-1418593313
+      HOMEBREW_NO_INSTALL_FROM_API: 1
     cmds:
+      # - task: update-brew-git
       - brew update
       - cmd: arch -arm64 brew upgrade --greedy
         ignore_error: true
       - brew cleanup
+
+  update-brew-git:
+    cmds:
+      - cd /opt/homebrew && git pull --rebase
 
   update-mise:
     desc: Update mise
@@ -40,7 +48,7 @@ tasks:
     run: once
     interactive: true
     cmds:
-      - mise upgrade
+      - mise upgrade --bump
 
   update:
     desc: Update libs and tools
@@ -51,12 +59,21 @@ tasks:
       - task: update-dotfiles
       - task: update-brew
       - task: update-mise
-      - cmd: echo "To Update Oh-My-ZSH, pls run 'omz update'"
-        silent: true
-  
+      - fish --command "fisher update"
+      - brew uninstall --cask docker --force
+  #   - cmd: echo "To Update Oh-My-ZSH, pls run 'omz update'"
+  #     silent: true
+
   weather:
     desc: Show weather for canoas
     aliases: [w]
     silent: true
     cmds:
       - curl wttr.in/canoas
+
+  plan:
+    desc: Show update plan
+    aliases: [p]
+    cmds:
+      - brew outdated
+      - mise outdated
