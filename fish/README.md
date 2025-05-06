@@ -1,0 +1,5 @@
+# Update plugins
+
+```
+fisher update
+```

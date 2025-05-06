@@ -1,20 +1,6 @@
-alias cat="bat"
-alias cls="clear"
-alias d="docker"
-alias dc="docker compose"
-alias g="git"
-alias gcb='git checkout -b'
-alias gco='git checkout'
-alias gl='git pull'
-alias gp='git push'
-alias gpra='git pull --rebase --autostash'
-alias gss='git status --short'
-alias m="make"
-alias mm="make -f Makefile.adamatti"
-alias pec="pet search --color | pbcopy"
-alias pel="pet list"
-alias pen="pet new -t"
-alias pes="pet search --color"
-alias pex="pet exec --color"
-alias t="task"
-alias tf="terraform"
+alias ...="cd ../../"
+alias ....="cd ../../../"
+
+# Services
+alias dolar="http -p 'b' :8880/api/trpc/finance.getDollar | jq .result.data"
+alias dollar="http -p 'b' :8880/api/trpc/finance.getDollar | jq .result.data"

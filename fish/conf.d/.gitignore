@@ -1,1 +1,6 @@
 secrets.fish
+
+# From plugins
+abbr_tips.fish
+autopair.fish
+fish-eza.fish
