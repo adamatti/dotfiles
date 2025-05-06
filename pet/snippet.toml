@@ -1,77 +1,105 @@
-[[snippets]]
-  description = "Git: undo latest commit"
+
+[[Snippets]]
+  Description = "SSH: Load ssh keys"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["ssh"]
+  command = "eval `ssh-agent -s` && ssh-add ~/.ssh/id_rsa"
+
+[[Snippets]]
+  Description = "Git: undo latest commit"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["git"]
   command = "git reset --soft HEAD~"
-  tag = ["git"]
-  output = ""
 
-[[snippets]]
-  description = "Git: fetch all and prune"
+[[Snippets]]
+  Description = "Git: fetch all and prune"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["git"]
   command = "git fetch --all --prune --jobs=10"
-  tag = ["git"]
-  output = ""
 
-[[snippets]]
-  description = "Git: empty commit to trigger build"
+[[Snippets]]
+  Description = "Git: empty commit to trigger build"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["git"]
   command = "git commit --allow-empty -m \"chore: trigger build\""
-  tag = ["git"]
-  output = ""
 
-[[snippets]]
-  description = "Git: The old Gupa"
+[[Snippets]]
+  Description = "Git: The old Gupa"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["git"]
   command = "git pull --rebase --autostash"
-  tag = ["git"]
-  output = ""
 
-[[snippets]]
-  description = "Docker: stop and remove all containers"
+[[Snippets]]
+  Description = "Docker: stop and remove all containers"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["docker"]
   command = "task -g docker:stop-and-remove"
-  tag = ["docker"]
-  output = ""
 
-[[snippets]]
-  description = "Docker: stop all containers"
+[[Snippets]]
+  Description = "Docker: stop all containers"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["docker"]
   command = "docker ps -aq | xargs docker stop"
-  tag = ["docker"]
-  output = ""
 
-[[snippets]]
-  description = "Docker: remove all images"
+[[Snippets]]
+  Description = "Docker: remove all images"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["docker"]
   command = "docker image ls -q | xargs -I {} docker image rm -f {}"
-  tag = ["docker"]
-  output = ""
 
-[[snippets]]
-  description = "Docker: image prune"
+[[Snippets]]
+  Description = "Docker: image prune"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["docker"]
   command = "docker image prune --all --force"
-  tag = ["docker"]
-  output = ""
 
-[[snippets]]
-  description = "Docker: full prune"
+[[Snippets]]
+  Description = "Docker: full prune"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["docker"]
   command = "docker system prune"
-  tag = ["docker"]
-  output = ""
 
-[[snippets]]
-  description = "DNS: refresh DNS"
+[[Snippets]]
+  Description = "DNS: refresh DNS"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["infra", "dns"]
   command = "sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
-  tag = ["infra", "dns"]
-  output = ""
 
-[[snippets]]
-  description = "Brew: list pinned items"
-  command = "brew list --pinned"
-  tag = ["brew"]
-  output = ""
-
-[[snippets]]
-  description = "Brew: list casks"
-  command = "brew cu"
-  tag = ["brew"]
-  output = ""
-
-[[snippets]]
-  description = "Cron: logs"
+[[Snippets]]
+  Description = "Cron: logs"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["cron"]
   command = "grep -i cron /var/log/system.log"
-  tag = ["cron"]
-  output = ""
+
+[[Snippets]]
+  Description = "Brew: list pinned items"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["brew"]
+  command = "brew list --pinned"
+
+[[Snippets]]
+  Description = "Brew: list casks"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["brew"]
+  command = "brew cu"
+
+[[Snippets]]
+  Description = "Docker: list stopped containers"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["docker"]
+  command = "docker ps --filter \"status=exited\""
