@@ -11,7 +11,8 @@ FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 pkgs=("starship")
 export DOTFILES_ROOT=~/workspace/github_ws/dotfiles
 
-source ${DOTFILES_ROOT}/zsh/before.zsh
+source ${DOTFILES_ROOT}/zsh/exports.zsh
+source ${DOTFILES_ROOT}/zsh/functions.zsh
 
 if test -f ~/secret.zsh; then
   source ~/secret.zsh
@@ -52,7 +53,7 @@ if containsElement "starship" "${pkgs[@]}"; then
   eval "$(starship init zsh)"
 fi
 
-source ${DOTFILES_ROOT}/zsh/after.zsh
+source ${DOTFILES_ROOT}/zsh/aliases.zsh
 
 ulimit -n 10240
 
