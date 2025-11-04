@@ -15,17 +15,17 @@ tasks:
     cmds:
       - task -l --sort alphanumeric
 
-  update-dotfiles:
+  dotfiles:update:
     desc: Update dot files
-    aliases: [ud]
+    aliases: [ud, du]
     run: once
     interactive: true
     cmds:
       - cd ${DOTFILES_ROOT};git pull --rebase --autostash
 
-  update-brew:
+  brew:update:
     desc: Update brew apps
-    aliases: [ub]
+    aliases: [ub, bu]
     run: once
     interactive: true
     env:
@@ -42,9 +42,9 @@ tasks:
     cmds:
       - cd /opt/homebrew && git pull --rebase
 
-  update-mise:
+  mise:update:
     desc: Update mise
-    aliases: [um]
+    aliases: [um, mu]
     run: once
     interactive: true
     cmds:
@@ -56,11 +56,12 @@ tasks:
     run: once
     interactive: true
     cmds:
-      - task: update-dotfiles
-      - task: update-brew
-      - task: update-mise
+      - task: dotfiles:update
+      - task: brew:update
+      - task: mise:update
       - fish --command "fisher update"
-      - brew uninstall --cask docker --force
+      # - brew uninstall --cask docker --force
+      - mise prune
   #   - cmd: echo "To Update Oh-My-ZSH, pls run 'omz update'"
   #     silent: true
 

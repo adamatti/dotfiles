@@ -59,9 +59,9 @@ tasks:
 
   save:all:
     desc: Save current config
-    aliases: [sa]
+    aliases: [sa, save]
     cmds:
-      - echo "Profile ${PROFILE}"
+      - 'echo "Profile in use: ${PROFILE}"'
       # run in parallel
       - task: brew:save
       - task: nodejs:save
