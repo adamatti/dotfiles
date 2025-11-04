@@ -16,14 +16,11 @@ htop
 httpie
 httpstat
 jq
-k9s
-kind
 knqyf263/pet/pet
 lazydocker
 lazygit
 libpq
 mise
-mongosh
 noti
 plantuml
 procs
@@ -31,6 +28,5 @@ starship
 telnet
 tldr
 vladkens/tap/macmon
-walk
 watch
 zoxide

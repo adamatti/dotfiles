@@ -1,0 +1,6 @@
+- keepingyouawake = caffeine
+- System monitor
+  - processspy
+  - omnidisksweeper
+  - stats
+- transmission = utorrent
