@@ -1,0 +1,11 @@
+---
+title: Stop work
+toggles: false
+sequence: parallel
+tags: work
+---
+
+x-bunch://close-code
+!Slack
+!superwhisper
+!zoom.us

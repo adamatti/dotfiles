@@ -1,0 +1,21 @@
+---
+title: Close Code
+toggles: false
+---
+
+# Close apps
+!Code
+!vscode
+!Visual Studio Code
+
+!Cursor
+!Bruno
+!DbGate
+!Chromium
+!Studio 3T Community Edition
+!DBeaver
+
+# Scripts
+$ cd /Users/adamatti/workspace/upkeep_ws/dockerize && task stop
+$ docker stop scheduler-postgres-1
+$ cd /Users/adamatti/workspace/upkeep_ws/fleet-web && docker compose stop -t 0

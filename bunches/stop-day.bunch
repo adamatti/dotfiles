@@ -1,0 +1,10 @@
+---
+title: Stop Day (and work)
+toggles: false
+sequence: parallel
+tags: day
+---
+
+x-bunch://close-code
+x-bunch://focus
+x-bunch://stop-work
