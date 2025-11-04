@@ -15,7 +15,7 @@ abbr md mkdir -p
 abbr mm make -f Makefile.adamatti
 abbr mt mise trust
 abbr t task
-abbr tf terraform
+abbr tf tofu
 abbr tgu task -g u
 abbr wt wezterm cli set-tab-title
 abbr c cursor
