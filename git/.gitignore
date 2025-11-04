@@ -6,7 +6,8 @@ coverage/
 .vscode/
 
 # Files
-.env
+.env*
+!.env.sample
 Taskfile.yaml
 Taskfile*.yaml
 .DS_Store
@@ -24,3 +25,7 @@ adamatti.*
 .clinic/
 node_modules/
 *.cpuprofile
+
+# Terraform
+.terraform/
+.terragrunt-cache/
