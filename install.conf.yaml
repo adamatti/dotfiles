@@ -1,26 +1,25 @@
 - defaults:
-    link:
-      relink: true
-      create: true
-      glob: true
+      link:
+          relink: true
+          create: true
+          glob: true
 
 - create:
-    - ~/.config
-    - ~/workspace/3rd
-    - ~/workspace/github_ws
+      - ~/.config
+      - ~/workspace/3rd
+      - ~/workspace/github_ws
 
 - shell:
-    - git submodule sync --recursive
-    - [git submodule update --init --recursive, Installing submodules]
+      - git submodule sync --recursive
+      - [git submodule update --init --recursive, Installing submodules]
 
 - link:
-    ~/.zshrc: zsh/.zshrc
-    ~/.gitignore: git/.gitignore
-    ~/.gitconfig: git/.gitconfig
-    ~/Taskfile-docker-compose.yaml: taskfile/Taskfile-docker-compose.yaml
-    ~/Taskfile-docker.yaml: taskfile/Taskfile-docker.yaml
-    ~/Taskfile-git.yaml: taskfile/Taskfile-git.yaml
-    ~/Taskfile.yaml: taskfile/Taskfile.yaml
-    ~/Documents/Bunches: bunches
-    ~/.config/pet: pet
-    ~/.config/fish: fish
+      ~/.gitignore: git/.gitignore
+      ~/.gitconfig: git/.gitconfig
+      ~/Taskfile-docker-compose.yaml: taskfile/Taskfile-docker-compose.yaml
+      ~/Taskfile-docker.yaml: taskfile/Taskfile-docker.yaml
+      ~/Taskfile-git.yaml: taskfile/Taskfile-git.yaml
+      ~/Taskfile.yaml: taskfile/Taskfile.yaml
+      ~/Documents/Bunches: bunches
+      ~/.config/pet: pet
+      ~/.config/fish: fish

@@ -62,7 +62,6 @@ tasks:
       - fish --command "fisher update"
       # - brew uninstall --cask docker --force
       - mise prune
-  #   - cmd: echo "To Update Oh-My-ZSH, pls run 'omz update'"
   #     silent: true
 
   weather:
