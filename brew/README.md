@@ -4,3 +4,4 @@
   - omnidisksweeper
   - stats
 - transmission = utorrent
+- graphviz / temurin = required by plantuml
