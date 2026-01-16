@@ -1,0 +1,23 @@
+---
+title: Close Personal apps
+toggles: false
+sequence: parallel
+---
+
+# Close apps
+!Code
+!vscode
+!Visual Studio Code
+
+!Spark Desktop
+# !Joplin
+!Beeper Desktop
+!Todoist
+!Deco
+
+# Close - Brave Apps
+!Grok
+!Youtube
+!Youtube Music
+!X
+!Reddit
