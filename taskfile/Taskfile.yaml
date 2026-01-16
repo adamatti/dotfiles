@@ -34,7 +34,8 @@ tasks:
     cmds:
       # - task: update-brew-git
       - brew update
-      - cmd: arch -arm64 brew upgrade --greedy
+      # - cmd: arch -arm64 brew upgrade --greedy
+      - cmd: brew upgrade
         ignore_error: true
       - brew cleanup
 
