@@ -103,3 +103,10 @@
   Output = ""
   Tag = ["docker"]
   command = "docker ps --filter \"status=exited\""
+
+[[Snippets]]
+  Description = "Shell: show top commands"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["shell"]
+  command = "history | awk '{print $1}'| sort | uniq -c | sort -nr | head -20"
