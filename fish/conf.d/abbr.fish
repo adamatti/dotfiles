@@ -19,6 +19,7 @@ abbr tf tofu
 abbr tgu task -g u
 abbr wt wezterm cli set-tab-title
 abbr c cursor
+abbr a agy
 
 # Docker
 abbr d docker

@@ -4,3 +4,6 @@ secrets.fish
 abbr_tips.fish
 autopair.fish
 fish-eza.fish
+
+# From fish updates
+fish_frozen_*
