@@ -50,6 +50,12 @@ tasks:
     cmds:
       - mise upgrade --bump
 
+  mise:prune:
+    desc: Remove not needed apps
+    aliases: [mp]
+    cmds:
+      - mise prune
+
   update:
     desc: Update libs and tools
     aliases: [u]
