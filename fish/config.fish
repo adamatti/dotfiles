@@ -2,6 +2,10 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-# Added by OrbStack: command-line tools and integration
-# This won't be added again if you remove it.
-source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+if type -q orb
+    source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+end
+
+if test -d $HOME/.antigravity/antigravity/bin
+    fish_add_path $HOME/.antigravity/antigravity/bin
+end
