@@ -13,9 +13,15 @@ tasks:
     cmds:
       - task -l
 
-  install:
+  dotbot:update:
+    desc: Update dotbot
+    aliases: [du]
+    cmds:
+      - git submodule update --remote dotbot
+
+  dotbot:install:
     desc: Install files with dotbot
-    aliases: [i]
+    aliases: [di, i, install]
     cmds:
       - ./install
 
@@ -48,7 +54,7 @@ tasks:
     aliases: [ia]
     cmds:
       # run sequencialy
-      - task: install
+      - task: dotbot:install
       - task: brew:install
 
   save:all:
@@ -57,4 +63,4 @@ tasks:
     cmds:
       - 'echo "Profile in use: ${PROFILE}"'
       # run in parallel
-      - task: nodejs:save
+      - task: brew:save
