@@ -43,12 +43,6 @@ tasks:
       - brew deps --tree --installed > brew-tree.txt
       - code brew-tree.txt
 
-  nodejs:save:
-    desc: Save global installs
-    aliases: [ns]
-    cmds:
-      - npm list -g --depth=0 -json > nodejs/globals.${PROFILE}.json
-
   install:all:
     desc: Install all (synlinks, brew)
     aliases: [ia]
@@ -63,5 +57,4 @@ tasks:
     cmds:
       - 'echo "Profile in use: ${PROFILE}"'
       # run in parallel
-      - task: brew:save
       - task: nodejs:save
