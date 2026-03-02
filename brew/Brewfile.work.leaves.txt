@@ -1,7 +1,11 @@
 awscli
 bat
 cocoapods
+colima
 common-fate/granted/granted
+docker
+docker-buildx
+docker-compose
 eza
 fd
 fish
@@ -18,6 +22,7 @@ libpq
 mise
 mkcert
 pkgconf
+socat
 starship
 tldr
 zoxide
