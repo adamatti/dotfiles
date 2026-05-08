@@ -13,7 +13,7 @@ Taskfile*.yaml
 .DS_Store
 .mise.toml
 Makefile
-*.old
+docker-compose.override.yml
 
 # Extensions
 *.not
@@ -21,6 +21,7 @@ Makefile
 adamatti.*
 *.adamatti.*
 *.log
+*.old
 
 # Nodejs
 .clinic/
@@ -33,3 +34,5 @@ node_modules/
 
 # AI
 CLAUDE.local.md
+AGENTS.local.md
+settings.local.json
