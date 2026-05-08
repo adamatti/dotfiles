@@ -15,6 +15,13 @@ tasks:
     cmds:
       - task -l --sort alphanumeric
 
+  cleanup:
+    desc: Cleanup routine
+    cmds:
+      - task: brew:cleanup
+      - task: mise:prune
+
+
   dotfiles:update:
     desc: Update dot files
     aliases: [ud, du]
@@ -23,22 +30,26 @@ tasks:
     cmds:
       - cd ${DOTFILES_ROOT};git pull --rebase --autostash
 
+  brew:cleanup:
+    cmds:
+      - brew cleanup --prune=all
+
   brew:update:
     desc: Update brew apps
     aliases: [ub, bu]
     run: once
     interactive: true
-    env:
+    # env:
       # https://github.com/Homebrew/brew/issues/14516#issuecomment-1418593313
-      HOMEBREW_NO_INSTALL_FROM_API: 1
+      # HOMEBREW_NO_INSTALL_FROM_API: 1
     cmds:
       # - task: update-brew-git
       - brew update
       # - cmd: arch -arm64 brew upgrade --greedy
-      - cmd: brew upgrade
+      # greedy = includes auto-updaters + latest
+      - cmd: brew upgrade --greedy
         ignore_error: true
       - brew cu -a
-      - brew cleanup
 
   update-brew-git:
     cmds:
@@ -68,9 +79,7 @@ tasks:
       - task: brew:update
       - task: mise:update
       - fish --command "fisher update"
-      # - brew uninstall --cask docker --force
-      - mise prune
-  #     silent: true
+      - task: cleanup
 
   weather:
     desc: Show weather for canoas
@@ -85,3 +94,15 @@ tasks:
     cmds:
       - brew outdated
       - mise outdated
+
+  claude:
+    desc: Open claude
+    interactive: true
+    ignore_error: true
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      # Kill claude-mem first
+      - kill $(lsof -ti :37777)
+      - pkill -f claude
+      - brew upgrade claude-code
+      - claude
