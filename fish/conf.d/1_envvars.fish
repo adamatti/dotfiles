@@ -12,3 +12,4 @@ set -Ux HISTORY_IGNORE "(ls|pwd|exit|export AWS_|wezterm)*"
 set -Ux VISUAL "nano"
 
 set -Ux GRANTED_ALIAS_CONFIGURED "true"
+set -Ux USQL_TERM_GRAPHICS "none"
