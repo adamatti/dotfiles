@@ -3,6 +3,7 @@ abbr -a --position anywhere -- -C --color
 # abbr -a --position anywhere -- -W --watch
 # abbr -a --position anywhere -- -H --help
 
+abbr bu brew upgrade
 abbr bi brew install
 abbr bs brew search
 abbr cat bat
