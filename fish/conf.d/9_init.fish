@@ -5,5 +5,6 @@ if type -q zoxide
     zoxide init fish | source
 end
 if type -q mise
-    mise activate fish | source
+    # Not needed. It is already activate somewhere else
+    # mise activate fish | source
 end
