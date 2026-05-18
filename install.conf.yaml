@@ -23,4 +23,5 @@
       ~/Documents/Bunches: bunches
       ~/.config/pet: pet
       ~/.config/fish: fish
+      ~/.config/ghostty: ghostty
       ~/.wezterm.lua: .wezterm.lua
