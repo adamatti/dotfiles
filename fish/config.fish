@@ -10,6 +10,6 @@ if test -d $HOME/.antigravity/antigravity/bin
     fish_add_path $HOME/.antigravity/antigravity/bin
 end
 
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
+# bun - use mise
+# set --export BUN_INSTALL "$HOME/.bun"
+# set --export PATH $BUN_INSTALL/bin $PATH
