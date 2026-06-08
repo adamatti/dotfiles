@@ -36,3 +36,5 @@ node_modules/
 CLAUDE.local.md
 AGENTS.local.md
 settings.local.json
+agpack.yml
+.agpack.lock.yml
