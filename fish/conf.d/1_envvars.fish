@@ -3,6 +3,7 @@ set -Ux DOTFILES_ROOT "/Users/adamatti/workspace/github_ws/dotfiles"
 set -Ux HOMEBREW_NO_ENV_HINTS "true"
 set -Ux HOMEBREW_PREFIX "$(brew --prefix)"
 set -Ux NEXT_TELEMETRY_DISABLED "true"
+set -Ux HOMEBREW_REQUIRE_TAP_TRUST "1"
 
 # https://martinheinz.dev/blog/110
 set -Ux HISTSIZE 10000000
