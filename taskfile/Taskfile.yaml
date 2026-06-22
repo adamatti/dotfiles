@@ -19,7 +19,8 @@ tasks:
     desc: Cleanup routine
     cmds:
       - task: brew:cleanup
-      - task: mise:prune
+#     Temporary disabled
+#     - task: mise:prune
 
 
   dotfiles:update:
