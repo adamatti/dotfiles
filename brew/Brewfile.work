@@ -1,56 +1,151 @@
-tap "buo/cask-upgrade"
-tap "common-fate/granted"
-tap "go-task/tap"
-tap "homebrew/cask"
-tap "homebrew/core"
-tap "knqyf263/pet"
+tap "buo/cask-upgrade", trusted: true
+tap "common-fate/granted", trusted: true
+tap "go-task/tap", trusted: true
+tap "jhlee0409/tap", trusted: true
+tap "knqyf263/pet", trusted: true
+tap "mobile-dev-inc/tap", trusted: true
+tap "withgraphite/tap", trusted: true
+tap "xo/xo", trusted: true
+# Official Amazon AWS command-line interface
 brew "awscli"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# YAML Parser
 brew "libyaml"
+# Dependency manager for Cocoa projects
 brew "cocoapods"
+# Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima", restart_service: :changed
+# Modern diagram scripting language that turns text to diagrams
+brew "d2"
+# Terminal visual disk space navigator
+brew "diskonaut"
+# Pack, ship and run any application as a lightweight container
 brew "docker"
+# Docker CLI plugin for extended build capabilities with BuildKit
 brew "docker-buildx"
+# Isolated development environments using Docker
 brew "docker-compose"
+# Modern, maintained replacement for ls
 brew "eza"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
+# User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
+# GitHub command-line tool
 brew "gh"
+# Interpreter for PostScript and PDF
 brew "ghostscript"
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg"
+# Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
+# User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
+# Simple terminal UI for git commands
 brew "lazygit"
+# Postgres C API library
 brew "libpq"
+# Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Simple tool to make locally trusted development certificates
 brew "mkcert"
+# Package compiler and linker metadata toolkit
 brew "pkgconf"
+# SOcket CAT: netcat on steroids
 brew "socat"
+# Cross-shell prompt for astronauts
 brew "starship"
+# Simplified and community-driven man pages
 brew "tldr"
+# CLI tool that moves files or folder to the trash
+brew "trash"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
+# The easiest way to access your cloud.
 brew "common-fate/granted/granted"
+# A fast, cross-platform build tool inspired by Make, designed for modern workflows.
 brew "go-task/tap/go-task"
+# Simple command-line snippet manager
 brew "knqyf263/pet/pet"
+# The easiest way to automate UI testing for your mobile app
+brew "mobile-dev-inc/tap/maestro"
+# Allows you to manage your stacked changes and submit them for review on GitHub
+brew "withgraphite/tap/graphite"
+# universal command-line SQL client interface
+brew "xo/xo/usql"
+# Agent orchestration platform
 cask "antigravity"
+# AI Coding Agent IDE
+cask "antigravity-ide"
+# Universal chat app powered by Matrix
 cask "beeper"
+# Web browser focusing on privacy
 cask "brave-browser"
+# Open source IDE for exploring and testing APIs
 cask "bruno"
+# Automation tool
 cask "bunch"
+# Anthropic's official Claude AI desktop app
+cask "claude"
+# Terminal-based AI coding assistant
+cask "claude-code"
+# Browse and analyze Claude Code conversation history offline
+cask "jhlee0409/tap/claude-code-history-viewer", trusted: true
+# Ghostty-based terminal with vertical tabs and notifications for AI coding agents
+cask "cmux"
+# Write, edit, and chat about your code with AI
 cask "cursor"
+# Command-line agent for Cursor
+cask "cursor-cli"
+# Universal database tool and SQL client
 cask "dbeaver-community"
+# Database manager for MySQL, PostgreSQL, SQL Server, MongoDB, SQLite and others
 cask "dbgate"
+# Collaborative team software
 cask "figma"
+# Utility for customizing which browser to start
 cask "finicky"
+# Grammarly for desktop
 cask "grammarly-desktop"
+# HTTP(S) debugging proxy, analyzer, and client
 cask "http-toolkit"
+# Note taking and to-do application with synchronisation capabilities
 cask "joplin"
+# Tool to prevent the system from going into sleep mode
 cask "keepingyouawake"
+# Screen and video recording software
 cask "loom"
+# Window manager
 cask "loop"
+# Tool to control external monitor brightness & volume
 cask "monitorcontrol"
+# Finds large, unwanted files and deletes them
+cask "omnidisksweeper"
+# Control your tools with a few keystrokes
 cask "raycast"
+# Minimal GUI for AI code agents
+cask "t3-code"
+# JDK from the Eclipse Foundation (Adoptium)
 cask "temurin"
+# Open-source code editor
 cask "visual-studio-code"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
+# Multiplayer code editor
+cask "zed"
+vscode "anthropic.claude-code"
+vscode "biomejs.biome"
+vscode "dbaeumer.vscode-eslint"
+vscode "eamodio.gitlens"
+vscode "jebbs.plantuml"
+vscode "shopify.ruby-lsp"
+vscode "souche.vscode-mindmap"
+vscode "styled-components.vscode-styled-components"
+vscode "vitest.explorer"
+vscode "vstirbu.vscode-mermaid-preview"
+go "cmd/go"
+go "cmd/gofmt"
+uv "agpack"

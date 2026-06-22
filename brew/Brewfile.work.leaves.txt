@@ -3,6 +3,8 @@ bat
 cocoapods
 colima
 common-fate/granted/granted
+d2
+diskonaut
 docker
 docker-buildx
 docker-compose
@@ -12,6 +14,7 @@ fish
 gh
 ghostscript
 gnupg
+go
 go-task/tap/go-task
 graphviz
 httpie
@@ -21,8 +24,12 @@ lazygit
 libpq
 mise
 mkcert
+mobile-dev-inc/tap/maestro
 pkgconf
 socat
 starship
 tldr
+trash
+withgraphite/tap/graphite
+xo/xo/usql
 zoxide
