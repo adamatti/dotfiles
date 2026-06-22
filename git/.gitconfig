@@ -1,6 +1,7 @@
 [core]
 excludesfile = ~/.gitignore
 editor = nano
+hooksPath = /Users/adamatti/.git-hooks
 
 [user]
 name = Marcelo Adamatti
@@ -9,7 +10,7 @@ email = adamatti@gmail.com
 [github]
 user = "adamatti"
 
-[includeIf "gitdir:~/workspace/upkeep_ws/"]
+[includeIf "gitdir:~/workspace/engine_ws/"]
 path = ~/workspace/github_ws/dotfiles/git/.gitconfig.work
 
 [push]
