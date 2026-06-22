@@ -2,8 +2,7 @@
 ---
 version: "3"
 
-env:
-  PROFILE: home
+dotenv: [.env]
 
 tasks:
   default:
@@ -28,6 +27,9 @@ tasks:
   brew:save:
     desc: Save installed brews
     aliases: [bs]
+    requires:
+      vars:
+        - PROFILE
     cmds:
       - cmd: rm -f brew/Brewfile.${PROFILE}
         silent: true
@@ -39,6 +41,9 @@ tasks:
   brew:install:
     desc: Install brew apps
     aliases: [bi]
+    requires:
+      vars:
+        - PROFILE
     cmds:
       - brew bundle install --file=brew/Brewfile.${PROFILE}
 
@@ -60,6 +65,9 @@ tasks:
   save:all:
     desc: Save current config
     aliases: [sa, save]
+    requires:
+      vars:
+        - PROFILE
     cmds:
       - 'echo "Profile in use: ${PROFILE}"'
       # run in parallel
