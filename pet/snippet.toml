@@ -110,3 +110,10 @@
   Output = ""
   Tag = ["shell"]
   command = "history | awk '{print $1}'| sort | uniq -c | sort -nr | head -20"
+
+[[Snippets]]
+  Description = "OSX: Restart audio service"
+  Filename = "/Users/adamatti/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["OSX"]
+  command = "sudo killall coreaudiod"
