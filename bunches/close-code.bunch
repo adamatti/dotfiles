@@ -3,6 +3,8 @@ title: Close Code
 toggles: false
 ---
 
+x-bunch://close-always
+
 # Close apps
 !Code
 !vscode
