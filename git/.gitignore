@@ -7,6 +7,7 @@ coverage/
 
 # Files
 .env*
+.aws.env
 !.env.sample
 Taskfile.yaml
 Taskfile*.yaml
