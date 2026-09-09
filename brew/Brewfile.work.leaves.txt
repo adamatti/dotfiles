@@ -1,10 +1,12 @@
 awscli
 bat
 cocoapods
+codeburn
 colima
 common-fate/granted/granted
 d2
 diskonaut
+dive
 docker
 docker-buildx
 docker-compose
@@ -15,13 +17,15 @@ gh
 ghostscript
 gnupg
 go
-go-task/tap/go-task
+go-task
 graphviz
 httpie
 imagemagick
+k1low/tap/mo
 knqyf263/pet/pet
 lazygit
 libpq
+mdserve
 mise
 mkcert
 mobile-dev-inc/tap/maestro
@@ -30,6 +34,7 @@ socat
 starship
 tldr
 trash
+watch
 withgraphite/tap/graphite
 xo/xo/usql
 zoxide

@@ -2,6 +2,7 @@ tap "buo/cask-upgrade", trusted: true
 tap "common-fate/granted", trusted: true
 tap "go-task/tap", trusted: true
 tap "jhlee0409/tap", trusted: true
+tap "k1low/tap", "https://github.com/k1LoW/homebrew-tap"
 tap "knqyf263/pet", trusted: true
 tap "mobile-dev-inc/tap", trusted: true
 tap "withgraphite/tap", trusted: true
@@ -14,12 +15,16 @@ brew "bat"
 brew "libyaml"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
+# See where your AI coding tokens go - by task, tool, model, and project
+brew "codeburn"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima", restart_service: :changed
 # Modern diagram scripting language that turns text to diagrams
 brew "d2"
 # Terminal visual disk space navigator
 brew "diskonaut"
+# Tool for exploring each layer in a docker image
+brew "dive"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
 # Docker CLI plugin for extended build capabilities with BuildKit
@@ -38,6 +43,8 @@ brew "gh"
 brew "ghostscript"
 # GNU Privacy Guard (OpenPGP)
 brew "gnupg"
+# Task is a task runner/build tool that aims to be simpler and easier to use
+brew "go-task", link: false
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -48,6 +55,8 @@ brew "imagemagick"
 brew "lazygit"
 # Postgres C API library
 brew "libpq"
+# Fast markdown preview server with live reload and theme support
+brew "mdserve"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
 # Simple tool to make locally trusted development certificates
@@ -62,16 +71,18 @@ brew "starship"
 brew "tldr"
 # CLI tool that moves files or folder to the trash
 brew "trash"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # The easiest way to access your cloud.
 brew "common-fate/granted/granted"
-# A fast, cross-platform build tool inspired by Make, designed for modern workflows.
-brew "go-task/tap/go-task"
+# mo is a Markdown viewer that opens .md files in a browser.
+brew "k1low/tap/mo", trusted: true
 # Simple command-line snippet manager
 brew "knqyf263/pet/pet"
 # The easiest way to automate UI testing for your mobile app
-brew "mobile-dev-inc/tap/maestro"
+brew "mobile-dev-inc/tap/maestro", link: false, trusted: true
 # Allows you to manage your stacked changes and submit them for review on GitHub
 brew "withgraphite/tap/graphite"
 # universal command-line SQL client interface
@@ -104,14 +115,20 @@ cask "cursor-cli"
 cask "dbeaver-community"
 # Database manager for MySQL, PostgreSQL, SQL Server, MongoDB, SQLite and others
 cask "dbgate"
+# Database management tool
+cask "dbx"
 # Collaborative team software
 cask "figma"
 # Utility for customizing which browser to start
 cask "finicky"
+# A fast, cross-platform build tool inspired by Make, designed for modern workflows.
+cask "go-task/tap/go-task", trusted: true
 # Grammarly for desktop
 cask "grammarly-desktop"
 # HTTP(S) debugging proxy, analyzer, and client
 cask "http-toolkit"
+# Java IDE by JetBrains
+cask "intellij-idea"
 # Note taking and to-do application with synchronisation capabilities
 cask "joplin"
 # Tool to prevent the system from going into sleep mode
@@ -120,14 +137,16 @@ cask "keepingyouawake"
 cask "loom"
 # Window manager
 cask "loop"
+# AI agent command center
+cask "maestro"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
+# Free and open-source RSS reader
+cask "netnewswire"
 # Finds large, unwanted files and deletes them
 cask "omnidisksweeper"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Minimal GUI for AI code agents
-cask "t3-code"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin"
 # Open-source code editor
@@ -136,15 +155,9 @@ cask "visual-studio-code"
 cask "wezterm"
 # Multiplayer code editor
 cask "zed"
-vscode "anthropic.claude-code"
-vscode "biomejs.biome"
-vscode "dbaeumer.vscode-eslint"
-vscode "eamodio.gitlens"
 vscode "jebbs.plantuml"
-vscode "shopify.ruby-lsp"
 vscode "souche.vscode-mindmap"
 vscode "styled-components.vscode-styled-components"
-vscode "vitest.explorer"
 vscode "vstirbu.vscode-mermaid-preview"
 go "cmd/go"
 go "cmd/gofmt"
