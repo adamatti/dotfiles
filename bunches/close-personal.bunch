@@ -4,16 +4,12 @@ toggles: false
 sequence: parallel
 ---
 
-# Close apps
-!Code
-!vscode
-!Visual Studio Code
-
-!Spark Desktop
+!Spark
 # !Joplin
 !Beeper Desktop
 !Todoist
 !Deco
+!NetNewsWire
 
 # Close - Brave Apps
 !Grok
