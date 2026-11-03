@@ -19,7 +19,8 @@ abbr t task
 abbr tf tofu
 abbr tgu task -g u
 abbr wt wezterm cli set-tab-title
-abbr c cursor
+# abbr c cursor
+abbr c code
 abbr a antigravity-ide
 
 # Docker
