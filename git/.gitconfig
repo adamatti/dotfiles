@@ -10,7 +10,7 @@ email = adamatti@gmail.com
 [github]
 user = "adamatti"
 
-[includeIf "gitdir:~/workspace/engine_ws/"]
+[includeIf "gitdir:~/workspace/upkeep_ws/"]
 path = ~/workspace/github_ws/dotfiles/git/.gitconfig.work
 
 [push]

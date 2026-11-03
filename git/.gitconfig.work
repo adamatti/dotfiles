@@ -6,4 +6,7 @@ email = marcelo.adamatti@upkeep.com
 user = "adamatti-upkeep"
 
 [core]
-sshCommand = "ssh -i ~/.ssh/upkeep/id_ed25519"
+sshCommand = "ssh -i ~/.ssh/upkeep/id_ed25519 -o IdentitiesOnly=yes"
+
+[url "git@github.com-work:upkeepapp/"]
+insteadOf = ssh://git@github.com/upkeepapp/
