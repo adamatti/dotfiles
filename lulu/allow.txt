@@ -37,6 +37,10 @@ rudderstack.beeper-tools.com
 nodejs.org
 ipwho.is
 192.168.68.1
+downloads.sparkmailapp.com
+updates.bravesoftware.com
+cdn.zoom.us
+api-updates.orbstack.dev
 
 # Brew update
 avatars.githubusercontent.com

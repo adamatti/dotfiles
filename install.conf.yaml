@@ -21,7 +21,8 @@
       ~/Taskfile-git.yaml: taskfile/Taskfile-git.yaml
       ~/Taskfile.yaml: taskfile/Taskfile.yaml
       ~/Documents/Bunches: bunches
-      ~/.config/pet: pet
-      ~/.config/fish: fish
-      ~/.config/ghostty: ghostty
+      ~/.config/pet: .config/pet
+      ~/.config/fish: .config/fish
+      ~/.config/ghostty: .config/ghostty
       ~/.wezterm.lua: .wezterm.lua
+      ~/.nirc: .nirc
