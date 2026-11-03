@@ -21,5 +21,7 @@
       ~/.config/pet: .config/pet
       ~/.config/fish: .config/fish
       ~/.config/ghostty: .config/ghostty
+      ~/.config/cmux: .config/cmux
+      ~/.config/zed: .config/zed
       ~/.wezterm.lua: .wezterm.lua
       ~/.nirc: .nirc
