@@ -1,0 +1,6 @@
+ethereum-rpc.publicnode.com
+eth.drpc.org
+eth-mainnet.public.blastapi.io
+rpc.mevblocker.io
+bsc-dataseed.binance.org
+bsc-rpc.publicnode.com
