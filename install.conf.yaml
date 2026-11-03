@@ -16,9 +16,6 @@
 - link:
       ~/.gitignore: git/.gitignore
       ~/.gitconfig: git/.gitconfig
-      ~/Taskfile-docker-compose.yaml: taskfile/Taskfile-docker-compose.yaml
-      ~/Taskfile-docker.yaml: taskfile/Taskfile-docker.yaml
-      ~/Taskfile-git.yaml: taskfile/Taskfile-git.yaml
       ~/Taskfile.yaml: taskfile/Taskfile.yaml
       ~/Documents/Bunches: bunches
       ~/.config/pet: .config/pet

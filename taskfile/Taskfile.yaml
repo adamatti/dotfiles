@@ -2,11 +2,6 @@
 ---
 version: "3"
 
-includes:
-  docker:
-    aliases: [d]
-    taskfile: ./Taskfile-docker.yaml
-
 tasks:
   default:
     desc: Show help
